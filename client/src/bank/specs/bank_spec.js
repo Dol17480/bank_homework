@@ -48,4 +48,12 @@ describe('bank', function() {
     bank.addAccount(account3);
     assert.equal( 200, bank.totalCash('business') );
   });
+  it("should add interest to account amount", function(){
+    var bank = new Bank();
+    var account1 = new Account({owner:'Jay',amount:50, type:'business'});
+    bank.addAccount(account1);
+    bank.payInterest(1.1);
+    assert.equal(55, account1.amount);
+  })
+
 });
