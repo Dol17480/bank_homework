@@ -53,7 +53,7 @@ describe('bank', function() {
     var account1 = new Account({owner:'Jay',amount:50, type:'business'});
     bank.addAccount(account1);
     bank.payInterest(1.1);
-    assert.equal(55, account1.amount);
+    assert.equal(55, account1.amount.toFixed(2));
   })
 
 });

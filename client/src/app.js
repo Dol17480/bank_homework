@@ -14,5 +14,9 @@ window.onload = function() {
   }
   var view = new BankView(bank);
   view.render();
-  
+// }
+
+//   var interestButton = document.getElementById('pay-interest');
+//   interestButton.onclick = function(){
+//     this.bank(accounts).payInterest(10);
 };

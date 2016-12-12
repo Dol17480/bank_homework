@@ -60,7 +60,11 @@
 	  }
 	  var view = new BankView(bank);
 	  view.render();
-	  
+	// }
+	
+	//   var interestButton = document.getElementById('pay-interest');
+	//   interestButton.onclick = function(){
+	//     this.bank(accounts).payInterest(10);
 	};
 
 
@@ -106,7 +110,7 @@
 	  },
 	  payInterest: function(num) {
 	    for (var account of this.accounts){
-	      account.amount = (account.amount * num).toFixed(2);
+	      account.amount = (account.amount * num);
 	    }
 	  }
 	};
@@ -207,10 +211,6 @@
 	   businessTotalDisplay.innerText = "Total Business: £" + this.bank.totalCash('business');
 	   personalTotalDisplay.innerText = "Total Personal: £" + this.bank.totalCash('personal');
 	
-	   var interestButton = document.getElementById('pay-interest');
-	   interestButton.onclick = function(){
-	     this.bank(accounts).payInterest(10);
-	   }
 	
 	  }
 	}
