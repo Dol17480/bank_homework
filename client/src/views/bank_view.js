@@ -45,6 +45,11 @@ BankView.prototype = {
    businessTotalDisplay.innerText = "Total Business: £" + this.bank.totalCash('business');
    personalTotalDisplay.innerText = "Total Personal: £" + this.bank.totalCash('personal');
 
+   var interestButton = document.getElementById('pay-interest');
+   interestButton.onclick = function(){
+     this.bank(accounts).payInterest(10);
+   }
+
   }
 }
 
